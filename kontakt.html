@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt - Schreinerei Wesner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav>
+        <div class="nav-title">
+          <a href="index.html">
+            <img src="Bilder/logo.png" alt="logo">
+          </a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="info.html">Info</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="zeiten.html">Öffnungszeiten</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h1 class="h1-center">Kontaktieren Sie uns</h1>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="button" onclick="showThankYouMessage()">Absenden</button>
+      </form>
+      <div id="response-message" style="display: none;">
+        <p>Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function showThankYouMessage() {
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('response-message').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

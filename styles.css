@@ -1,0 +1,394 @@
+/* Allgemeine Stile für den Header */
+
+/* @font-face Regel zum Einbinden der Bauhaus 93 Schriftart */
+@font-face {
+    font-family: 'Bauhaus 93';
+    src: url('fonts/Bauhaus93.woff2') format('woff2'),
+         url('fonts/Bauhaus93.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main {
+    margin-top: 10px; /* Abstand vom oberen Rand, um Platz für den fixierten Header zu schaffen */
+    padding: 80px; /* Innenabstand für den Hauptinhalt */
+}
+
+p {
+    text-align: justify; /* Blocksatz */
+    text-align-last: left; /* Links ausgerichteter Text am Ende */
+    margin: 0; /* Entfernt Standard-Margin, falls benötigt */
+}
+
+.h1-center {
+    text-align: center; /* Horizontale Zentrierung des Textes */
+    margin: 0 auto; /* Automatische Margen zur Zentrierung des Elements */
+    width: fit-content; /* Passt die Breite des Elements dem Inhalt an */
+    padding: 20px 0; /* Optional: Innenabstand oben und unten */
+}
+
+/* Allgemeine Stile für den Header */
+.site-header {
+    margin: 0; /* Entfernt den äußeren Abstand */
+    padding: 0; /* Entfernt den inneren Abstand */
+    width: 100%; /* Header soll die gesamte Breite des Viewports einnehmen */
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Breite enthalten sind */
+    position: fixed; /* Header bleibt beim Scrollen fixiert */
+    top: 0; /* Header wird am oberen Rand des Viewports positioniert */
+    left: 0; /* Header wird am linken Rand des Viewports positioniert */
+    z-index: 1000; /* Header wird über dem restlichen Inhalt angezeigt */
+   /* width: 100vw; /* Stellt sicher, dass der Header die volle Breite des Viewports einnimmt */
+}
+
+/* Stile für die Navigation */
+nav {
+    background-color: #ffffff; /* Hintergrundfarbe des Nav-Bereichs */
+    padding: 15px 30px; /* Abstand oben und unten */
+    display: flex; /* Flexbox für die Ausrichtung */
+    align-items: center; /* Vertikal zentrieren */
+    justify-content: center; /* Zentriert das Logo und das Menü horizontal */
+    border-bottom: 2px solid #e0e0e0; /* Dünner unterer Rahmen */
+    box-shadow: 0 4px 6px rgba(180, 125, 73, 0.50); /* Leichter Schatten für einen modernen Look */
+    height: 80px; /* Feste Höhe für die Navigation */
+    width: 100%; /* Sicherstellen, dass die Navigation die volle Breite des Viewports einnimmt */
+}
+
+/* Stile für das Logo in der Navigation */
+nav .nav-title {
+    display: flex;
+    align-items: center; /* Vertikal zentrieren des Logos */
+    margin-right: 30px; /* Abstand zwischen Logo und Menü */
+}
+
+nav .nav-title a {
+    display: block; /* Block für das Layout */
+}
+
+nav .nav-title img {
+    max-height: 50px; /* Höhe des Logos anpassen */
+    width: auto; /* Breite automatisch anpassen, um das Seitenverhältnis zu wahren */
+}
+
+/* Stile für das Navigation-Menü */
+nav ul {
+    list-style-type: none; /* Entfernt Aufzählungszeichen */
+    padding: 0; /* Entfernt den Standard-Padding */
+    margin: 0; /* Entfernt den Standard-Margin */
+    display: flex; /* Flexbox für die horizontale Ausrichtung der Links */
+    gap: 30px; /* Abstand zwischen den Links */
+}
+
+/* Stile für die einzelnen Navigation-Links */
+nav ul li a {
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    color: #000000; /* Schwarz für den Text */
+    font-size: 20px; /* Vergrößerte Schriftgröße */
+    padding: 10px 15px; /* Abstand innerhalb des Links */
+    display: inline-block; /* Macht den Link blockartig für das Padding */
+    border-radius: 6px; /* Abgerundete Ecken für den Hintergrund */
+    transition: background-color 0.3s, color 0.3s; /* Sanfter Übergang für Hintergrund und Farbe */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart anwenden */
+}
+
+/* Hover-Effekte für die Links in der Navigation */
+nav ul li a:hover {
+    background-color: #b47d49; /* Hintergrundfarbe beim Hover */
+    color: #ffffff; /* Weiße Schriftfarbe beim Hover */
+}
+
+/* Grid-Layout für die Hauptinhalte */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibles Grid für verschiedene Bildschirmgrößen */
+    gap: 20px; /* Abstand zwischen den Grid-Items */
+    width: 90%; /* Breite des Containers */
+    max-width: 1200px; /* Maximale Breite des Containers */
+    margin: 20px auto; /* Zentrierung und Abstand vom oberen Rand */
+}
+
+/* Stile für die einzelnen Grid-Items */
+.grid-item {
+    position: relative; /* Positionierung für Textüberlagerung */
+    border-radius: 8px; /* Abgerundete Ecken für jedes Grid-Item */
+    overflow: hidden; /* Verhindert, dass Inhalte außerhalb des Items angezeigt werden */
+}
+
+/* Stile für Bilder in den Grid-Items */
+.grid-item img {
+    width: 100%; /* Breite des Bildes auf 100% des Containers setzen */
+    height: auto; /* Höhe automatisch anpassen */
+    display: block; /* Verhindert zusätzliche Abstände unter Bildern */
+    border-radius: 8px; /* Abgerundete Ecken für Bilder */
+}
+
+/* Stile für Textbereiche in den Grid-Items */
+.text-main {
+    padding: 20px; /* Innenabstand für den Textbereich */
+    border-radius: 8px; /* Abgerundete Ecken für den Textbereich */
+    background-color: #ffffff; /* Hintergrundfarbe für den Textbereich */
+    color: #000000; /* Textfarbe */
+}
+
+.text-main h2 {
+    margin-top: 0; /* Entfernt oberen Abstand des Titels */
+}
+
+.text-main p {
+    margin: 0 0 10px; /* Abstand zwischen den Absätzen */
+    line-height: 1.6; /* Zeilenhöhe für besseren Lesefluss */
+}
+
+.text-main a {
+    color: #b47d49; /* Linkfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+}
+
+.text-main a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+/* Stile für die Shop-Seite */
+.services-overview {
+    padding: 20px; /* Innenabstand für die Übersicht */
+}
+
+.services-overview h1 {
+    color: #000000; /* Schwarze Schriftfarbe für Überschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Überschriften */
+    margin-bottom: 20px; /* Abstand unterhalb der Überschrift */
+}
+
+.service-link {
+    color: #b47d49; /* Linkfarbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    display: inline-block; /* Macht den Link blockartig für das Padding */
+    margin-top: 10px; /* Abstand oben für den Link */
+    font-weight: bold; /* Fettgedruckter Link für bessere Sichtbarkeit */
+}
+
+.service-link:hover {
+    text-decoration: underline; /* Unterstreicht den Link beim Hover */
+}
+
+/* Stile für das Impressum */
+.impressum-container {
+    max-width: 800px; /* Maximale Breite für das Impressum */
+    margin: 20px auto; /* Zentrierung und Abstand vom oberen Rand */
+    padding: 20px; /* Innenabstand für das Impressum */
+    background-color: #ffffff; /* Hintergrundfarbe für das Impressum */
+    border-radius: 8px; /* Abgerundete Ecken für das Impressum */
+    /*box-shadow: 0 4px 6px rgba(180, 125, 73, 0.50); /* Leichter Schatten für einen modernen Look */
+}
+
+.impressum-container h2 {
+    color: #000000; /* Schwarze Schriftfarbe für Überschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Überschriften */
+    margin-top: 0; /* Kein Abstand oben für Überschriften */
+    margin-bottom: 5px; /* Abstand unterhalb der Überschrift */
+    font-size: 14pt;
+}
+
+.impressum-container h1 {
+    color: #b47d49; /* Schwarze Schriftfarbe für Überschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Überschriften */
+    margin-top: 0; /* Kein Abstand oben für Überschriften */
+    margin-bottom: 10px; /* Abstand unterhalb der Überschrift */
+    text-align: center ;
+}
+
+.impressum-container p {
+    color: #000000; /* Schwarze Schriftfarbe */
+    margin-bottom: 5px; /* Abstand zwischen den Absätzen */
+    text-align: left;
+}
+
+.impressum-container strong {
+    color: #000000; /* Schwarze Schriftfarbe */
+    margin-bottom: 5px; /* Abstand zwischen den Absätzen */
+    text-align: left;
+}
+
+/* Spezifischer Stil für ein weiteres <p> innerhalb des Impressum-Containers */
+.impressum-container .p-spacing {
+    margin-bottom: 30px; /* Größerer Abstand zwischen den Absätzen */
+}
+
+
+.impressum-container a {
+    color: #b47d49; /* Linkfarbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+.impressum-container a:hover {
+    text-decoration: underline; /* Unterstreicht den Link beim Hover */
+}
+
+/* Stile für die Kontakt-Seite */
+.contact-section {
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    
+}
+
+.contact-section h1 {
+    color: #000000;
+    font-family: 'Bauhaus 93', sans-serif;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+   /* padding: 20px; /* Innenabstand für die Container */
+   /* margin-bottom: 20px; /* Abstand unterhalb der Container */
+   /* box-shadow: 0 4px 6px rgba(180, 125, 73, 0.50); /* Leichter Schatten für einen modernen Look */
+}
+
+.contact-section label {
+    font-size: 16px;
+    color: #000000;
+    font-family: 'Bauhaus 93', sans-serif;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background-color: #b47d49;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Bauhaus 93', sans-serif;
+}
+
+.contact-section button:hover {
+    background-color: #b47d49; /* Etwas dunklerer Grünton beim Hover */
+}
+
+#response-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Stile für die Info-Seite */
+.zeit-section {
+    padding: 20px; /* Innenabstand für die Übersicht */
+    width: 90%; /* Breite des Containers */
+    max-width: 800px; /* Maximale Breite des Containers */
+    margin: 20px auto; /* Zentrierung und Abstand vom oberen Rand */
+}
+
+.zeit-section h1 {
+    color: #000000; /* Schwarze Schriftfarbe für Überschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Überschriften */
+    margin-bottom: 20px; /* Abstand unterhalb der Überschrift */
+}
+
+.zeit-container {
+    background-color: #ffffff; /* Hintergrundfarbe für die Info-Container */
+    border-radius: 8px; /* Abgerundete Ecken für die Container */
+    padding: 20px; /* Innenabstand für die Container */
+    margin-bottom: 20px; /* Abstand unterhalb der Container */
+    /*box-shadow: 0 4px 6px rgba(180, 125, 73, 0.50); /* Leichter Schatten für einen modernen Look */
+}
+
+.zeit-container h2 {
+    color: #b47d49; /* Schwarze Schriftfarbe für Unterüberschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Unterüberschriften */
+    margin-top: 0; /* Kein Abstand oben für Unterüberschriften */
+    margin-bottom: 10px; /* Abstand unterhalb der Unterüberschrift */
+}
+
+.zeit-container iframe {
+    width: 100%; /* Breite des Bildes auf 100% des Containers setzen */
+    height: 500px; /* Höhe automatisch anpassen */
+    display: block; /* Verhindert zusätzliche Abstände unter Bildern */
+    border-radius: 8px; /* Abgerundete Ecken für Bilder */
+}
+
+.zeit-container .div-karte {
+    width: auto; /* Breite des Bildes auf 100% des Containers setzen */
+    height: 500px; /* Höhe automatisch anpassen */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.zeit-container ul {
+    list-style-type: none; /* Entfernt Aufzählungszeichen */
+    padding: 0; /* Entfernt den Standard-Padding */
+    margin: 0; /* Entfernt den Standard-Margin */
+}
+
+.zeit-container li {
+    margin-bottom: 5px; /* Abstand zwischen den Listenpunkten */
+}
+
+.zeit-container a {
+    color: #b47d49; /* Linkfarbe */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
+.zeit-container a:hover {
+    text-decoration: underline; /* Unterstreicht den Link beim Hover */
+}
+
+.team-section {
+    padding: 20px; /* Innenabstand für die Übersicht */
+    width: 90%; /* Breite des Containers */
+    max-width: 800px; /* Maximale Breite des Containers */
+    margin: 20px auto; /* Zentrierung und Abstand vom oberen Rand */
+}
+
+.team-section h1 {
+    color: #000000; /* Schwarze Schriftfarbe für Überschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Überschriften */
+    margin-bottom: 20px; /* Abstand unterhalb der Überschrift */
+}
+
+.grid-container-team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibles Grid für verschiedene Bildschirmgrößen */
+    gap: 20px; /* Abstand zwischen den Grid-Items */
+    width: 80%; /* Breite des Containers */
+    max-width: 1200px; /* Maximale Breite des Containers */
+    margin: 20px auto; /* Zentrierung und Abstand vom oberen Rand */
+    background-color: #ffffff; /* Hintergrundfarbe für die Info-Container */
+    border-radius: 8px; /* Abgerundete Ecken für die Container */
+    padding: 20px; /* Innenabstand für die Container */
+    margin-bottom: 20px; /* Abstand unterhalb der Container */
+    box-shadow: 0 4px 6px rgba(180, 125, 73, 0.50); /* Leichter Schatten für einen modernen Look */
+}
+
+.grid-container-team h2 {
+    color: #b47d49; /* Schwarze Schriftfarbe für Unterüberschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Unterüberschriften */
+    margin-top: 0; /* Kein Abstand oben für Unterüberschriften */
+    margin-bottom: -10px; /* Abstand unterhalb der Unterüberschrift */
+}
+
+.grid-container-team h3 {
+    color: #000000; /* Schwarze Schriftfarbe für Unterüberschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Unterüberschriften */
+    margin-top: 0; /* Kein Abstand oben für Unterüberschriften */
+    margin-bottom: 10px; /* Abstand unterhalb der Unterüberschrift */
+}
+
+.grid-container-team img {
+    width: 80%; /* Breite des Bildes auf 100% des Containers setzen */
+    height: auto; /* Höhe automatisch anpassen */
+    display: block; /* Verhindert zusätzliche Abstände unter Bildern */
+    border-radius: 8px; /* Abgerundete Ecken für Bilder */
+}
