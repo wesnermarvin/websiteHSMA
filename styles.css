@@ -183,7 +183,10 @@ p {
     text-align: justify; /* Blocksatz */
     text-align-last: left; /* Links ausgerichteter Text am Ende */
     margin: 0; /* Entfernt Standard-Margin, falls benötigt */
-    line-height: 120%;
+    line-height: 1.2; /* Line-Height auf 120% setzen */
+    hyphens: auto; /* Automatische Silbentrennung aktivieren */
+    -webkit-hyphens: auto; /* Unterstützung für ältere Webkit-Browser */
+    -ms-hyphens: auto; /* Unterstützung für ältere IE-Browser */
 }
 
 .h1-center {
