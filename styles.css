@@ -41,6 +41,13 @@ body {
     max-width: 800px;
     margin: 0 auto;
   }
+
+  .about-us h1 {
+    text-align: center; /* Horizontale Zentrierung des Textes */
+    margin: 0 auto; /* Automatische Margen zur Zentrierung des Elements */
+    width: fit-content; /* Passt die Breite des Elements dem Inhalt an */
+    padding: 20px 0; /* Optional: Innenabstand oben und unten */
+  }
   
   /* Unsere Leistungen */
   .services-container {
@@ -180,6 +187,7 @@ p {
 }
 
 .h1-center {
+    font-family: 'Bauhaus 93', sans-serif;
     text-align: center; /* Horizontale Zentrierung des Textes */
     margin: 0 auto; /* Automatische Margen zur Zentrierung des Elements */
     width: fit-content; /* Passt die Breite des Elements dem Inhalt an */
