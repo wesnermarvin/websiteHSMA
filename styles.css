@@ -9,6 +9,164 @@
     font-style: normal;
 }
 
+/* Grundlegende Stile */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  a:hover {
+    color: #b47d49;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Über uns */
+  .about-us, .services, .call-to-action {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .about-us p {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Unsere Leistungen */
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .service-item {
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .service-item img {
+    width: 100%; /* Breite des Containers */
+    height: 300px; /* Festgelegte Höhe */
+    object-fit: cover; /* Skaliert das Bild und schneidet es zu, um den Rahmen zu füllen */
+    object-position: center; /* Zentriert das Bild im Rahmen */
+    display: block; /* Verhindert zusätzliche Abstände unter Bildern */
+    border-radius: 8px; /* Abgerundete Ecken für Bilder */
+  }
+  
+  .service-item h3 {
+    color: #b47d49;
+    margin: 10px 0;
+  }
+  
+  /* Call-to-Action */
+  .call-to-action p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+  }
+
+  .cta-button {
+    background-color: #b47d49;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Footer-Stile */
+.site-footer {
+    background-color: #ffffff; /* Hintergrundfarbe des Footers */
+    padding: 15px 30px; /* Abstand oben und unten */
+    display: flex; /* Flexbox für die Ausrichtung */
+    align-items: center; /* Vertikal zentrieren */
+    justify-content: space-between; /* Gleichmäßige Verteilung des Inhalts */
+    border-top: 4px solid rgba(180, 125, 73, 1); /* Linie in der gewünschten Farbe */
+    /*width: 100%; /* Sicherstellen, dass der Footer die volle Breite des Viewports einnimmt */
+    flex-wrap: wrap; /* Flex-Wrap für kleinere Bildschirme */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-column h2, .footer-column h3 {
+    color: #b47d49; /* Schriftfarbe */
+    margin-bottom: 10px;
+  }
+  
+  .footer-column p, .footer-column ul li a {
+    color: #000; /* Schriftfarbe für Text und Links */
+    text-decoration: none;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid #b47d49;
+    width: 100%;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  .footer-bottom a {
+    color: #b47d49;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons a {
+    margin-left: 10px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  
+
 main {
     margin-top: 10px; /* Abstand vom oberen Rand, um Platz für den fixierten Header zu schaffen */
     padding: 80px; /* Innenabstand für den Hauptinhalt */
@@ -18,6 +176,7 @@ p {
     text-align: justify; /* Blocksatz */
     text-align-last: left; /* Links ausgerichteter Text am Ende */
     margin: 0; /* Entfernt Standard-Margin, falls benötigt */
+    line-height: 120%;
 }
 
 .h1-center {
@@ -96,6 +255,11 @@ nav ul li a:hover {
     color: #ffffff; /* Weiße Schriftfarbe beim Hover */
 }
 
+nav ul li a.active {
+    background-color: #b47d49;
+    color: #ffffff;
+}
+
 /* Grid-Layout für die Hauptinhalte */
 .grid-container {
     display: grid;
@@ -147,7 +311,7 @@ nav ul li a:hover {
     text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
-/* Stile für die Shop-Seite */
+/* Stile für die Leistung-Seite */
 .services-overview {
     padding: 20px; /* Innenabstand für die Übersicht */
 }
@@ -169,6 +333,16 @@ nav ul li a:hover {
 .service-link:hover {
     text-decoration: underline; /* Unterstreicht den Link beim Hover */
 }
+
+.grid-item .leistung-img {
+        width: 100%; /* Breite des Bildes auf 100% des Containers setzen */
+        height: 200px; /* Höhe automatisch anpassen */
+        display: block; /* Verhindert zusätzliche Abstände unter Bildern */
+        border-radius: 8px; /* Abgerundete Ecken für Bilder */
+    
+}
+
+
 
 /* Stile für das Impressum */
 .impressum-container {
@@ -283,7 +457,7 @@ nav ul li a:hover {
     color: #000000;
 }
 
-/* Stile für die Info-Seite */
+/* Stile für die Oefungszeiten-Seite */
 .zeit-section {
     padding: 20px; /* Innenabstand für die Übersicht */
     width: 90%; /* Breite des Containers */
@@ -391,4 +565,105 @@ nav ul li a:hover {
     height: auto; /* Höhe automatisch anpassen */
     display: block; /* Verhindert zusätzliche Abstände unter Bildern */
     border-radius: 8px; /* Abgerundete Ecken für Bilder */
+}
+
+/* Stile für die Info-Seite */
+.info-overview {
+    padding: 20px; /* Innenabstand für die Übersicht */
+}
+
+.info-overview h1 {
+    color: #000000; /* Schwarze Schriftfarbe für Überschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Überschriften */
+    margin-bottom: 20px; /* Abstand unterhalb der Überschrift */
+    text-align: center; /* Zentriert die Überschrift */
+}
+
+.info-overview h2 {
+    color: #b47d49; /* Schwarze Schriftfarbe für Überschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Überschriften */
+    margin-bottom: 20px; /* Abstand unterhalb der Überschrift */
+    text-align: left; /* Lins Überschrift */
+}
+
+.info-overview h2.h2-center {
+    color: #b47d49; /* Schwarze Schriftfarbe für Überschriften */
+    font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Überschriften */
+    margin-bottom: -10px; /* Abstand unterhalb der Überschrift */
+    text-align: center; /* Lins Überschrift */
+}
+
+.info-overview .grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Eine Spalte für die Hauptkategorien */
+    gap: 40px; /* Abstand zwischen den Hauptkategorien */
+    padding: 20px; /* Innenabstand für den Grid-Container */
+}
+
+.info-overview .grid-item {
+    background-color: #ffffff; /* Weiße Hintergrundfarbe für die Grid-Elemente */
+    border-radius: 8px; /* Abgerundete Ecken */
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten für die Grid-Elemente */
+    padding: 20px; /* Innenabstand für die Grid-Elemente */
+}
+
+.info-overview .grid-selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Drei Spalten für die Auswahlmöglichkeiten */
+    gap: 20px; /* Abstand zwischen den Auswahlmöglichkeiten */
+}
+
+.info-overview .selection-item {
+    text-align: center; /* Zentriert den Text und die Bilder */
+}
+
+.info-overview .selection-item img {
+    width: 100%; /* Breite des Containers */
+    height: 200px; /* Festgelegte Höhe */
+    object-fit: cover; /* Skaliert das Bild und schneidet es zu, um den Rahmen zu füllen */
+    object-position: center; /* Zentriert das Bild im Rahmen */
+    display: block; /* Verhindert zusätzliche Abstände unter Bildern */
+    border-radius: 8px; /* Abgerundete Ecken für Bilder */
+}
+
+.info-overview .text-main h2, 
+.info-overview .selection-item h3 {
+    color: #000000; /* Schwarze Schriftfarbe für Überschriften */
+    margin-bottom: 10px; /* Abstand unterhalb der Überschrift */
+}
+
+.info-overview .text-main p, 
+.info-overview .selection-item p {
+    color: #000000; /* Schwarze Schriftfarbe für Text */
+    text-align: justify; /* Blocksatz für Text */
+}
+
+/* Stile für den Termin vereinbaren Abschnitt */
+.info-overview .appointment-container {
+    text-align: center; /* Zentriert den Text und die Schaltfläche */
+    padding: 20px; /* Innenabstand für das Container */
+    border-radius: 8px; /* Abgerundete Ecken */
+
+}
+
+
+.info-overview .appointment-container p {
+    color: #000000; /* Schwarze Schriftfarbe */
+    margin-bottom: 20px; /* Abstand unterhalb des Textes */
+    font-size: 16px; /* Schriftgröße */
+}
+
+
+.info-overview .appointment-button {
+    display: inline-block; /* Inline-Block Darstellung */
+    padding: 10px 20px; /* Innenabstand für die Schaltfläche */
+    background-color: #b47d49; /* Blaue Hintergrundfarbe */
+    color: #ffffff; /* Weiße Schriftfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+    border-radius: 4px; /* Abgerundete Ecken */
+    font-size: 24px; /* Schriftgröße */
+}
+
+.info-overview .appointment-button:hover {
+    background-color: #b47d49; /* Dunklere Blautönung beim Hover */
 }
