@@ -550,7 +550,7 @@ nav ul li a.active {
     color: #b47d49; /* Schwarze Schriftfarbe für Unterüberschriften */
     font-family: 'Bauhaus 93', sans-serif; /* Schriftart für Unterüberschriften */
     margin-top: 0; /* Kein Abstand oben für Unterüberschriften */
-    margin-bottom: -10px; /* Abstand unterhalb der Unterüberschrift */
+    margin-bottom: 0%; /* Abstand unterhalb der Unterüberschrift */
 }
 
 .grid-container-team h3 {
